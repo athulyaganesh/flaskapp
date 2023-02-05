@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+
+<body style="background-color:pink;">
+    <h1>Hello you are logged in.</h1>
+    {% if res %}
+        <i id="username"> Username: {{ res.username }} </i><br>
+        <i id="password">Password: {{ res.password }} </i><br>
+        <i id="firstname">First Name: {{ res.firstname }} </i><br>
+        <i id="lastname">Last Name: {{ res.lastname }} </i><br>
+        <i id="email">E-mail: {{ res.email }} </i><br>
+    {% endif %}
+    <a href="{{url_for('logout')}}">Press here to logout</a>
+</body>
+
+</html>
